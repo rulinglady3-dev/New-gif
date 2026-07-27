@@ -104,50 +104,54 @@ envelope.addEventListener("click",()=>{
 function moveNo(){
 
 
-    // buton ölçüsü
-
-    const btnWidth = noBtn.getBoundingClientRect().width;
-    const btnHeight = noBtn.getBoundingClientRect().height;
-
-
-
-    // güvenli alan
-
-    const padding = 40;
+    const rect =
+    noBtn.getBoundingClientRect();
 
 
 
     const maxX =
-    window.innerWidth - btnWidth - padding;
+    window.innerWidth - rect.width;
 
 
     const maxY =
-    window.innerHeight - btnHeight - padding;
+    window.innerHeight - rect.height;
 
 
-
-    // yeni konum
 
     const x =
-    Math.random() * maxX + padding/2;
+    Math.random() * maxX;
 
 
     const y =
-    Math.random() * maxY + padding/2;
+    Math.random() * maxY;
 
 
 
-    noBtn.style.position="fixed";
+    noBtn.style.position = "fixed";
+
 
     noBtn.style.left =
-    x + "px";
+    Math.max(10, x) + "px";
 
 
     noBtn.style.top =
-    y + "px";
+    Math.max(10, y) + "px";
 
 
-    noBtn.style.zIndex="9999";
+
+    // SORU DEĞİŞTİRME
+
+    questionIndex++;
+
+
+    if(questionIndex < questions.length){
+
+
+        message.textContent =
+        questions[questionIndex];
+
+
+    }
 
 
 
@@ -158,11 +162,11 @@ function moveNo(){
 
     if(yesScale < 2.5){
 
+
         yesBtn.style.transform =
         `scale(${yesScale})`;
 
     }
-
 
 
 }
@@ -172,8 +176,11 @@ function moveNo(){
 
 noBtn.addEventListener(
 "mouseenter",
-moveNo
-);
+()=>{
+
+    moveNo();
+
+});
 
 
 
