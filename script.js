@@ -113,21 +113,32 @@ function moveNo(){
 
 
 
-    const x =
-    Math.random()*maxX;
+const x =
+Math.max(
+    20,
+    Math.min(
+        Math.random() * maxX,
+        window.innerWidth - noBtn.offsetWidth - 20
+    )
+);
 
 
-    const y =
-    Math.random()*maxY;
+const y =
+Math.max(
+    20,
+    Math.min(
+        Math.random() * maxY,
+        window.innerHeight - noBtn.offsetHeight - 20
+    )
+);
 
 
-
-    noBtn.style.position="fixed";
-
+   noBtn.style.position="fixed";
+    
+    noBtn.style.zIndex="999";
 
     noBtn.style.left =
     x+"px";
-
 
     noBtn.style.top =
     y+"px";
