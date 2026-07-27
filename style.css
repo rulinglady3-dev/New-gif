@@ -282,28 +282,18 @@ body{
 
 #final-text{
 
-
     display:none;
 
+    color:#ff3f7f;
 
-    color:#ff4b7d;
+    font-size:24px;
 
-
-    font-size:30px;
-
+    font-weight:bold;
 
     text-align:center;
 
-
-    animation:
-
-    fadeIn 2s;
-
-
     text-shadow:
-
-    0 0 15px white;
-
+    0 0 10px rgba(255,80,150,.8);
 
 }
 
@@ -399,7 +389,16 @@ opacity:0;
 
 #message{
 
-    transition:.3s;
+    font-size:22px;
+
+    color:#ff3f7f;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    text-shadow:
+    0 0 10px rgba(255,80,150,.8);
 
 }
 
