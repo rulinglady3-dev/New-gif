@@ -351,7 +351,12 @@ yesBtn.addEventListener("click",()=>{
 
         letterCat.style.display="none";
 
+        catImg.style.display="none";
+
         message.style.display="none";
+        
+        buttons.style.display="none";
+    
 
         finalText.style.display="none";
 
