@@ -105,37 +105,37 @@ function moveNo(){
 
 
     const rect =
-    noBtn.getBoundingClientRect();
+noBtn.getBoundingClientRect();
+
+
+const margin = 100;
+
+
+const maxX =
+window.innerWidth - rect.width - margin;
+
+
+const maxY =
+window.innerHeight - rect.height - margin;
 
 
 
-    const maxX =
-    window.innerWidth - rect.width;
+const x =
+Math.random() * maxX + 50;
 
 
-    const maxY =
-    window.innerHeight - rect.height;
-
-
-
-    const x =
-    Math.random() * maxX;
-
-
-    const y =
-    Math.random() * maxY;
+const y =
+Math.random() * maxY + 50;
 
 
 
     noBtn.style.position = "fixed";
 
 
-    noBtn.style.left =
-    Math.max(10, x) + "px";
+    noBtn.style.left = x + "px";
 
 
-    noBtn.style.top =
-    Math.max(10, y) + "px";
+    noBtn.style.top = y + "px";
 
 
 
