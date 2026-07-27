@@ -405,3 +405,23 @@ opacity:0;
     z-index:20;
 
 }
+#signature{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:15px;
+
+    color:white;
+
+    font-size:14px;
+
+    opacity:.8;
+
+    font-family:Arial;
+
+    text-shadow:
+    0 0 8px pink;
+
+}
