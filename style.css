@@ -494,3 +494,35 @@ opacity:0;
     font-size:22px;
 
 }
+
+#final-gif{
+
+    display:none;
+
+    width:180px;
+
+}
+
+
+#final-link-text{
+
+    display:none;
+
+    color:#ff4b7d;
+
+    font-size:22px;
+
+}
+
+
+#final-link{
+
+    display:none;
+
+    margin-top:20px;
+
+    color:#ff4b7d;
+
+    font-size:22px;
+
+}
