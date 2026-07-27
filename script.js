@@ -10,15 +10,15 @@ let questionIndex = 0;
 
 const questions = [
 
-    "YUUU, will you be my ...?",
+    "YUUU, will you be my(Think about whatever you want)?",
 
-    "LOVE ME,HUG ME,KİSS MEEEEE",
+    "LOVE ME,HUG ME,KİSS MEEE",
 
     "YUUUU,aRe YoU sUrEeeeee",
 
     "One more chance pleasee",
 
-    "Will you stay with me?"
+    "Will you stay with meee?"
 
 ];
 
