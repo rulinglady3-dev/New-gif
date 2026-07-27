@@ -1,0 +1,159 @@
+* {
+    box-sizing:border-box;
+}
+
+
+body {
+
+    margin:0;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    background-image:url("heart-bg.jpg");
+    background-size:cover;
+    background-position:center;
+
+    font-family:Arial;
+}
+
+
+
+/* Zarf */
+
+#envelope-container {
+
+    text-align:center;
+    cursor:pointer;
+
+}
+
+
+#envelope-container img {
+
+    width:250px;
+
+}
+
+
+#envelope-container p {
+
+    color:white;
+    font-size:24px;
+
+}
+
+
+
+
+/* Mektup */
+
+#letter-container {
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+.letter-window {
+
+    width:380px;
+    height:520px;
+
+    background:url("window.png");
+    background-size:100% 100%;
+
+    display:flex;
+
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+
+    transform:scale(0);
+
+    transition:.5s;
+
+}
+
+
+
+.letter-window.open {
+
+    transform:scale(1);
+
+}
+
+
+
+
+#letter-cat {
+
+    width:160px;
+
+}
+
+
+
+#message {
+
+    font-size:22px;
+
+    color:#ff4b7d;
+
+    text-align:center;
+
+}
+
+
+
+
+/* Butonlar */
+
+
+#letter-buttons {
+
+    display:flex;
+
+    gap:25px;
+
+    align-items:center;
+
+}
+
+
+.btn {
+
+    width:100px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.no-btn {
+
+    position:relative;
+
+}
+
+
+
+#final-text {
+
+    display:none;
+
+    color:#ff4b7d;
+
+    font-size:24px;
+
+}
