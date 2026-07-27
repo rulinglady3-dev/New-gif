@@ -238,7 +238,7 @@ body{
 
     position:relative;
 
-    z-index:15;
+    z-index:20;
 
 }
 
@@ -407,7 +407,7 @@ opacity:0;
 
 .no-btn{
 
-    position:relative;
+    position:absolute;
 
     z-index:10;
 
