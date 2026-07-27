@@ -9,6 +9,8 @@ let questionIndex = 0;
 
 let typingTimer;
 
+let questionDelay;
+
 
 const questions = [
 
@@ -30,32 +32,46 @@ function typeText(element, text){
     clearInterval(typingTimer);
 
 
-    element.textContent = "";
+    element.style.opacity="0";
 
 
-    let i = 0;
+    setTimeout(()=>{
+
+
+        element.textContent="";
+
+
+        let i = 0;
+
+
+        element.style.opacity="1";
 
 
 
-    typingTimer = setInterval(()=>{
+        typingTimer = setInterval(()=>{
 
 
-        element.textContent += text[i];
+            element.textContent += text[i];
 
 
-        i++;
+            i++;
 
 
-        if(i >= text.length){
+
+            if(i >= text.length){
 
 
-            clearInterval(typingTimer);
+                clearInterval(typingTimer);
 
 
-        }
+            }
 
 
-    },50);
+        },60);
+
+
+
+    },300);
 
 
 }
