@@ -355,6 +355,14 @@ yesBtn.addEventListener("click",()=>{
 
     },3000);
 
+    finalText.innerHTML =
+`
+Now is the time to huggggg
+<br><br>
+`;
+
+
+createHearts();
 
 });
 
