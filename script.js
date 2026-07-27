@@ -35,23 +35,41 @@ let yesScale = 1;
 
 
 
-// Zarf açılması
+// =======================
+// ZARF AÇILIŞ
+// =======================
+
 
 envelope.addEventListener("click",()=>{
 
 
-    envelope.style.display="none";
-
-    letter.style.display="flex";
+    envelope.style.animation =
+    "fadeOut .8s forwards";
 
 
     setTimeout(()=>{
 
-        document
-        .querySelector(".letter-window")
-        .classList.add("open");
 
-    },50);
+        envelope.style.display="none";
+
+
+        letter.style.display="flex";
+
+
+        setTimeout(()=>{
+
+
+            document
+            .querySelector(".letter-window")
+            .classList.add("open");
+
+
+        },100);
+
+
+
+    },700);
+
 
 
 });
@@ -60,42 +78,62 @@ envelope.addEventListener("click",()=>{
 
 
 
-// No kaçması
+
+// =======================
+// NO KAÇMA
+// =======================
+
 
 function moveNo(){
 
 
-    let x =
-    Math.random() *
-    (window.innerWidth - 120);
+    const maxX =
+    window.innerWidth - noBtn.offsetWidth - 30;
 
 
-    let y =
-    Math.random() *
-    (window.innerHeight - 120);
+    const maxY =
+    window.innerHeight - noBtn.offsetHeight - 30;
+
+
+
+    const x =
+    Math.random()*maxX;
+
+
+    const y =
+    Math.random()*maxY;
 
 
 
     noBtn.style.position="fixed";
 
-    noBtn.style.left=x+"px";
 
-    noBtn.style.top=y+"px";
+    noBtn.style.left =
+    x+"px";
 
 
-
-    // Yes büyümesi
-
-    yesScale +=0.2;
+    noBtn.style.top =
+    y+"px";
 
 
 
-    if(yesScale <= 2.5){
+
+
+    // YES büyümesi
+
+
+    yesScale +=0.15;
+
+
+    if(yesScale < 2.5){
+
 
         yesBtn.style.transform =
         `scale(${yesScale})`;
 
+
     }
+
 
 
 }
@@ -104,7 +142,7 @@ function moveNo(){
 
 
 
-// Bilgisayar
+// PC
 
 noBtn.addEventListener(
 "mouseenter",
@@ -119,9 +157,12 @@ noBtn.addEventListener(
 "pointerdown",
 (e)=>{
 
+
     e.preventDefault();
 
+
     moveNo();
+
 
 });
 
@@ -129,12 +170,20 @@ noBtn.addEventListener(
 
 
 
-// Yes
 
-yesBtn.addEventListener("click",()=>{
+// =======================
+// YES
+// =======================
 
 
-    catImg.src="cat_dance.gif";
+yesBtn.addEventListener(
+"click",
+()=>{
+
+
+    catImg.src =
+    "cat_dance.gif";
+
 
 
     message.textContent =
@@ -142,10 +191,89 @@ yesBtn.addEventListener("click",()=>{
 
 
 
-    buttons.style.display="none";
+    buttons.style.display =
+    "none";
 
 
-    finalText.style.display="block";
+
+    finalText.style.display =
+    "block";
+
+
+
+    finalText.innerHTML =
+    `
+    Thank you for making me smile ❤️
+    <br><br>
+    ✨ You are special ✨
+    `;
+
+
+
+    createHearts();
 
 
 });
+
+
+
+
+
+
+
+// =======================
+// KALP EFEKTİ
+// =======================
+
+
+function createHearts(){
+
+
+    for(let i=0;i<30;i++){
+
+
+        let heart =
+        document.createElement("div");
+
+
+        heart.innerHTML="❤️";
+
+
+        heart.style.position="fixed";
+
+
+        heart.style.left =
+        Math.random()*100+"vw";
+
+
+        heart.style.top =
+        "100vh";
+
+
+        heart.style.fontSize =
+        (15+Math.random()*25)+"px";
+
+
+        heart.style.animation =
+        "heartFly 3s linear";
+
+
+
+        document.body.appendChild(heart);
+
+
+
+        setTimeout(()=>{
+
+
+            heart.remove();
+
+
+        },3000);
+
+
+
+    }
+
+
+}
