@@ -430,16 +430,42 @@ opacity:0;
 
     display:none;
 
+    width:100%;
+
+    height:100%;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+#final-cat{
+
+    width:150px;
+
+}
+
+
+#final-message{
+
+    font-size:22px;
+
+    color:#ff3f7f;
+
     text-align:center;
 
 }
 
 
-#final-question p{
+#final-buttons{
 
-    font-size:22px;
+    display:flex;
 
-    color:#ff3f7f;
+    gap:30px;
 
 }
 
@@ -449,5 +475,18 @@ opacity:0;
     width:100px;
 
     cursor:pointer;
+
+}
+
+
+#link-message{
+
+    display:none;
+
+    margin-top:25px;
+
+    color:#ff3f7f;
+
+    font-size:22px;
 
 }
