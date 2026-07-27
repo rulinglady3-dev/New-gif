@@ -230,13 +230,15 @@ body{
 
 #letter-buttons{
 
-
     display:flex;
 
     gap:25px;
 
     align-items:center;
 
+    position:relative;
+
+    z-index:15;
 
 }
 
@@ -402,8 +404,19 @@ opacity:0;
     transition:.3s;
 
 }
+
 .no-btn{
 
-    position:absolute;
+    position:relative;
+
+    z-index:10;
+
+}
+
+.yes-btn{
+
+    position:relative;
+
+    z-index:20;
 
 }
