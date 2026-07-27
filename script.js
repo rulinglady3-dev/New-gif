@@ -351,19 +351,18 @@ yesBtn.addEventListener("click",()=>{
 
         letterCat.style.display="none";
 
-        catImg.style.display="none";
+        catImg.remove();
 
-        message.style.display="none";
-        
-        buttons.style.display="none";
-    
+message.remove();
 
-        finalText.style.display="none";
+buttons.remove();
+
+finalText.remove();
 
 
-        // yeni sayfa
+// yeni sayfa
 
-        finalQuestion.style.display="flex";
+finalQuestion.style.display="flex";
 
 
         finalCat.src="cat_heart.gif";
