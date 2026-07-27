@@ -104,93 +104,68 @@ envelope.addEventListener("click",()=>{
 function moveNo(){
 
 
+    // buton ölçüsü
+
+    const btnWidth = noBtn.getBoundingClientRect().width;
+    const btnHeight = noBtn.getBoundingClientRect().height;
+
+
+
+    // güvenli alan
+
+    const padding = 40;
+
+
+
     const maxX =
-    window.innerWidth - noBtn.offsetWidth - 30;
+    window.innerWidth - btnWidth - padding;
 
 
     const maxY =
-    window.innerHeight - noBtn.offsetHeight - 30;
+    window.innerHeight - btnHeight - padding;
 
 
 
-const x =
-Math.max(
-    20,
-    Math.min(
-        Math.random() * maxX,
-        window.innerWidth - noBtn.offsetWidth - 20
-    )
-);
+    // yeni konum
+
+    const x =
+    Math.random() * maxX + padding/2;
 
 
-const y =
-Math.max(
-    20,
-    Math.min(
-        Math.random() * maxY,
-        window.innerHeight - noBtn.offsetHeight - 20
-    )
-);
+    const y =
+    Math.random() * maxY + padding/2;
 
 
-   noBtn.style.position="fixed";
-    
-    noBtn.style.zIndex="999";
+
+    noBtn.style.position="fixed";
 
     noBtn.style.left =
-    x+"px";
+    x + "px";
+
 
     noBtn.style.top =
-    y+"px";
-
-    // SORU DEĞİŞTİRME
-
-questionIndex++;
+    y + "px";
 
 
-if(questionIndex < questions.length){
+    noBtn.style.zIndex="9999";
 
-
-    message.style.opacity="0";
-
-
-    setTimeout(()=>{
-
-
-        message.textContent =
-        questions[questionIndex];
-
-
-        message.style.opacity="1";
-
-
-    },300);
-
-
-}
 
 
     // YES büyümesi
-
 
     yesScale +=0.15;
 
 
     if(yesScale < 2.5){
 
-
         yesBtn.style.transform =
         `scale(${yesScale})`;
-
 
     }
 
 
 
 }
-
-
-
 
 
 // PC
