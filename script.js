@@ -103,8 +103,24 @@ const finalQuestion =
 document.getElementById("final-question");
 
 
-const finalYesButtons =
-document.querySelectorAll(".final-yes");
+const letterCat =
+document.getElementById("letter-cat");
+
+
+const finalCat =
+document.getElementById("final-cat");
+
+
+const finalMessage =
+document.getElementById("final-message");
+
+
+const finalButtons =
+document.getElementById("final-buttons");
+
+
+const linkMessage =
+document.getElementById("link-message");
 
 let yesScale = 1;
 
@@ -296,36 +312,51 @@ noBtn.addEventListener(
 // =======================
 
 
-yesBtn.addEventListener(
-"click",
-()=>{
+yesBtn.addEventListener("click",()=>{
 
 
-    catImg.src =
-    "cat_dance.gif";
-
+    catImg.src="cat_dance.gif";
 
 
     message.textContent =
     "I knew you would say YES ❤️";
 
 
-
-    buttons.style.display =
-    "none";
+    buttons.style.display="none";
 
 
+    finalText.style.display="block";
 
-    finalText.style.display =
-    "block";
+
 
     setTimeout(()=>{
 
 
-    finalQuestion.style.display="block";
+        // eski sayfayı temizle
+
+        letterCat.style.display="none";
+
+        message.style.display="none";
+
+        finalText.style.display="none";
 
 
-},2000);
+        // yeni sayfa
+
+        finalQuestion.style.display="flex";
+
+
+        finalCat.src="cat_heart.gif";
+
+
+        finalMessage.textContent =
+        "Would you like to spend a little more time with me? ❤️";
+
+
+    },3000);
+
+
+});
 
 
 
