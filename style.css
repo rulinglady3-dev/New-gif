@@ -236,9 +236,7 @@ body{
 
     align-items:center;
 
-    position:relative;
-
-    z-index:20;
+    justify-content:center;
 
 }
 
@@ -407,13 +405,9 @@ opacity:0;
 
 .no-btn{
 
-    position:absolute;
+    position:relative;
 
     z-index:10;
-
-    left:150px;
-
-    top:420px;
 
 }
 
