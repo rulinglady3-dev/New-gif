@@ -102,6 +102,21 @@ document.getElementById("final-text");
 const finalQuestion =
 document.getElementById("final-question");
 
+const finalYesButtons =
+document.querySelectorAll(".final-yes");
+
+
+const finalGif =
+document.getElementById("final-gif");
+
+
+const finalLinkText =
+document.getElementById("final-link-text");
+
+
+const finalLink =
+document.getElementById("final-link");
+
 
 const letterCat =
 document.getElementById("letter-cat");
@@ -429,21 +444,18 @@ finalYesButtons.forEach(button=>{
     button.addEventListener("click",()=>{
 
 
-        lastMessage.textContent =
-        "I'm happy to spend more time with you";
-
-
         document
-        .getElementById("last-gif")
-        .src="final.gif";
-
-
-        document
-        .getElementById("last-buttons")
+        .getElementById("final-buttons")
         .style.display="none";
 
 
-        nextLink.style.display="block";
+        finalGif.style.display="block";
+
+
+        finalLinkText.style.display="block";
+
+
+        finalLink.style.display="block";
 
 
     });
