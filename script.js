@@ -5,6 +5,23 @@ document.getElementById("envelope-container");
 const letter =
 document.getElementById("letter-container");
 
+let questionIndex = 0;
+
+
+const questions = [
+
+    "Yu, will you be my .......? ",
+
+    "Are you sure?",
+
+    "Really? I prepared this for you ",
+
+    "One more chance...",
+
+    "Will you stay with me? 💖"
+
+];
+
 
 const noBtn =
 document.querySelector(".no-btn");
