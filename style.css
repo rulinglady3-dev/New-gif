@@ -276,9 +276,8 @@ body{
 
 .no-btn{
 
-
     position:relative;
-
+    transition:.3s;
 
 }
 
