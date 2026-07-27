@@ -135,15 +135,7 @@ function moveNo(){
 
 
 
-    noBtn.style.position="absolute";
-
-
-    noBtn.style.left =
-    x + "px";
-
-
-    noBtn.style.top =
-    y + "px";
+    
 
 
 
