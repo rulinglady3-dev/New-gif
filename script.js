@@ -180,10 +180,12 @@ function moveNo(){
 
     if(questionIndex < questions.length){
 
-        message.textContent =
-        questions[questionIndex];
+    typeText(
+        message,
+        questions[questionIndex]
+    );
 
-    }
+}
 
 
 
