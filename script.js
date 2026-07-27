@@ -171,6 +171,32 @@ function moveNo(){
     noBtn.style.top =
     y + "px";
 
+    const animations = [
+
+    "rotate(15deg)",
+
+    "rotate(-15deg)",
+
+    "scale(0.8)",
+
+    "translateY(-20px)",
+
+    "rotate(360deg)"
+
+];
+
+
+const randomAnimation =
+animations[
+Math.floor(
+Math.random() * animations.length
+)
+];
+
+
+noBtn.style.transform =
+randomAnimation;
+
 
 
     // soru değiştirme
