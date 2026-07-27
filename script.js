@@ -21,6 +21,32 @@ const questions = [
     "Will you stay with meee?"
 
 ];
+function typeText(element, text){
+
+    element.textContent = "";
+
+    let i = 0;
+
+
+    let timer = setInterval(()=>{
+
+
+        element.textContent += text[i];
+
+
+        i++;
+
+
+        if(i >= text.length){
+
+            clearInterval(timer);
+
+        }
+
+
+    },50);
+
+}
 
 
 const noBtn =
