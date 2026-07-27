@@ -426,44 +426,22 @@ opacity:0;
 
 }
 
-#last-screen{
+#final-question{
 
     display:none;
 
     text-align:center;
 
-    color:#ff4b7d;
-
 }
 
 
+#final-question p{
 
-#last-gif{
+    font-size:22px;
 
-    width:180px;
-
-}
-
-
-
-#last-message{
-
-    font-size:24px;
+    color:#ff3f7f;
 
 }
-
-
-
-#last-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:30px;
-
-}
-
 
 
 .final-yes{
@@ -471,19 +449,5 @@ opacity:0;
     width:100px;
 
     cursor:pointer;
-
-}
-
-
-
-#next-link{
-
-    display:none;
-
-    margin-top:30px;
-
-    color:white;
-
-    font-size:22px;
 
 }
