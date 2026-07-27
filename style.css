@@ -425,3 +425,65 @@ opacity:0;
     0 0 8px pink;
 
 }
+
+#last-screen{
+
+    display:none;
+
+    text-align:center;
+
+    color:#ff4b7d;
+
+}
+
+
+
+#last-gif{
+
+    width:180px;
+
+}
+
+
+
+#last-message{
+
+    font-size:24px;
+
+}
+
+
+
+#last-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+}
+
+
+
+.final-yes{
+
+    width:100px;
+
+    cursor:pointer;
+
+}
+
+
+
+#next-link{
+
+    display:none;
+
+    margin-top:30px;
+
+    color:white;
+
+    font-size:22px;
+
+}
