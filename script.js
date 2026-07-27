@@ -99,22 +99,12 @@ document.getElementById("message");
 const finalText =
 document.getElementById("final-text");
 
-const lastScreen =
-document.getElementById("last-screen");
-
-
-const lastMessage =
-document.getElementById("last-message");
+const finalQuestion =
+document.getElementById("final-question");
 
 
 const finalYesButtons =
 document.querySelectorAll(".final-yes");
-
-
-const nextLink =
-document.getElementById("next-link");
-
-
 
 let yesScale = 1;
 
@@ -332,17 +322,10 @@ yesBtn.addEventListener(
     setTimeout(()=>{
 
 
-    letter.style.display="none";
+    finalQuestion.style.display="block";
 
 
-    lastScreen.style.display="block";
-
-
-    lastMessage.textContent =
-    "Would you like to spend a little more time with me? ❤️";
-
-
-},3000);
+},2000);
 
 
 
