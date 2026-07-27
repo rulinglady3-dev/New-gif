@@ -243,24 +243,12 @@ body{
 
 
 .btn{
- 
-    max-width:110px;
 
-    height:auto;
-
-    width:110px;
-
+    width:100px;
 
     cursor:pointer;
 
-
     transition:.3s;
-
-
-    filter:
-    drop-shadow(
-    0 0 8px pink
-    );
 
 }
 
