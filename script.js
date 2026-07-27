@@ -358,27 +358,6 @@ yesBtn.addEventListener("click",()=>{
 
 });
 
-
-
-    finalText.innerHTML =
-    `
-    Now is the time to huggggg
-    <br><br>
-    `;
-
-
-
-    createHearts();
-
-
-});
-
-
-
-
-
-
-
 // =======================
 // KALP EFEKTİ
 // =======================
