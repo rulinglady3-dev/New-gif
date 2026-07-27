@@ -10,15 +10,15 @@ let questionIndex = 0;
 
 const questions = [
 
-    "Yu, will you be my .......? ",
+    "YUUU, will you be my ........?",
 
-    "Are you sure?",
+    "LOVE ME,HUG ME,KİSS MEEEEE",
 
-    "Really? I prepared this for you ",
+    "YUUUU,aRe YoU sUrEeeeee",
 
-    "One more chance...",
+    "One more chance pleasee",
 
-    "Will you stay with me? 💖"
+    "Will you stay with me?💖"
 
 ];
 
@@ -241,9 +241,8 @@ yesBtn.addEventListener(
 
     finalText.innerHTML =
     `
-    Thank you for making me smile ❤️
+    Now is the time to huggggg
     <br><br>
-    ✨ You are special ✨
     `;
 
 
