@@ -169,17 +169,12 @@ function moveNo(){
     noBtn.getBoundingClientRect();
 
 
-
-    const safeAreaTop = 220;
-const safeAreaBottom = 40;
-
-
 const maxX =
-box.width - btn.width - 30;
+box.width - btn.width - 40;
 
 
 const maxY =
-box.height - btn.height - safeAreaBottom;
+box.height - btn.height - 40;
 
 
 
@@ -188,16 +183,9 @@ Math.random() * maxX + 20;
 
 
 const y =
-Math.random() * (maxY - safeAreaTop) + safeAreaTop;
-
+Math.random() * maxY + 20;
 
     noBtn.style.position="absolute";
-
-    noBtn.style.zIndex="5";
-
-yesBtn.style.zIndex="20";
-
-message.style.zIndex="20";
 
     noBtn.style.left =
     x + "px";
