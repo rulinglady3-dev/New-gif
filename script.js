@@ -104,52 +104,58 @@ envelope.addEventListener("click",()=>{
 function moveNo(){
 
 
-    const rect =
-noBtn.getBoundingClientRect();
+    const letterBox =
+    document.querySelector(".letter-window");
 
 
-const margin = 100;
+    const box =
+    letterBox.getBoundingClientRect();
 
 
-const maxX =
-window.innerWidth - rect.width - margin;
-
-
-const maxY =
-window.innerHeight - rect.height - margin;
+    const btn =
+    noBtn.getBoundingClientRect();
 
 
 
-const x =
-Math.random() * maxX + 50;
+    const maxX =
+    box.width - btn.width - 40;
 
 
-const y =
-Math.random() * maxY + 50;
-
-
-
-    noBtn.style.position = "fixed";
-
-
-    noBtn.style.left = x + "px";
-
-
-    noBtn.style.top = y + "px";
+    const maxY =
+    box.height - btn.height - 40;
 
 
 
-    // SORU DEĞİŞTİRME
+    const x =
+    Math.random() * maxX + 20;
+
+
+    const y =
+    Math.random() * maxY + 20;
+
+
+
+    noBtn.style.position="absolute";
+
+
+    noBtn.style.left =
+    x + "px";
+
+
+    noBtn.style.top =
+    y + "px";
+
+
+
+    // soru değiştirme
 
     questionIndex++;
 
 
     if(questionIndex < questions.length){
 
-
         message.textContent =
         questions[questionIndex];
-
 
     }
 
@@ -161,7 +167,6 @@ Math.random() * maxY + 50;
 
 
     if(yesScale < 2.5){
-
 
         yesBtn.style.transform =
         `scale(${yesScale})`;
