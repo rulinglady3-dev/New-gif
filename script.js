@@ -14,7 +14,7 @@ let questionDelay;
 
 const questions = [
 
-    "YUUU, will you be my(Think about whatever you want)?",
+    "YUUU, will you be my .....? ❤️",
 
     "LOVE ME,HUG ME,KİSS MEEE",
 
