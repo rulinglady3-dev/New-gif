@@ -7,6 +7,8 @@ document.getElementById("letter-container");
 
 let questionIndex = 0;
 
+let typingTimer;
+
 
 const questions = [
 
@@ -21,14 +23,21 @@ const questions = [
     "Will you stay with meee?"
 
 ];
+
 function typeText(element, text){
 
+
+    clearInterval(typingTimer);
+
+
     element.textContent = "";
+
 
     let i = 0;
 
 
-    let timer = setInterval(()=>{
+
+    typingTimer = setInterval(()=>{
 
 
         element.textContent += text[i];
@@ -39,15 +48,17 @@ function typeText(element, text){
 
         if(i >= text.length){
 
-            clearInterval(timer);
+
+            clearInterval(typingTimer);
+
 
         }
 
 
     },50);
 
-}
 
+}
 
 const noBtn =
 document.querySelector(".no-btn");
