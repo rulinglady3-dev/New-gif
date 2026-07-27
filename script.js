@@ -132,8 +132,31 @@ function moveNo(){
     noBtn.style.top =
     y+"px";
 
+    // SORU DEĞİŞTİRME
+
+questionIndex++;
 
 
+if(questionIndex < questions.length){
+
+
+    message.style.opacity="0";
+
+
+    setTimeout(()=>{
+
+
+        message.textContent =
+        questions[questionIndex];
+
+
+        message.style.opacity="1";
+
+
+    },300);
+
+
+}
 
 
     // YES büyümesi
