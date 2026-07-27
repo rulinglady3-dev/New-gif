@@ -440,6 +440,8 @@ opacity:0;
 
     align-items:center;
 
+    text-align:center;
+
 }
 
 
@@ -524,5 +526,16 @@ opacity:0;
     color:#ff4b7d;
 
     font-size:22px;
+
+}
+#final-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
 
 }
