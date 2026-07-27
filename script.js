@@ -99,6 +99,21 @@ document.getElementById("message");
 const finalText =
 document.getElementById("final-text");
 
+const lastScreen =
+document.getElementById("last-screen");
+
+
+const lastMessage =
+document.getElementById("last-message");
+
+
+const finalYesButtons =
+document.querySelectorAll(".final-yes");
+
+
+const nextLink =
+document.getElementById("next-link");
+
 
 
 let yesScale = 1;
@@ -314,6 +329,21 @@ yesBtn.addEventListener(
     finalText.style.display =
     "block";
 
+    setTimeout(()=>{
+
+
+    letter.style.display="none";
+
+
+    lastScreen.style.display="block";
+
+
+    lastMessage.textContent =
+    "Would you like to spend a little more time with me? ❤️";
+
+
+},3000);
+
 
 
     finalText.innerHTML =
@@ -391,3 +421,31 @@ function createHearts(){
 
 
 }
+
+finalYesButtons.forEach(button=>{
+
+
+    button.addEventListener("click",()=>{
+
+
+        lastMessage.textContent =
+        "I'm happy to spend more time with you";
+
+
+        document
+        .getElementById("last-gif")
+        .src="final.gif";
+
+
+        document
+        .getElementById("last-buttons")
+        .style.display="none";
+
+
+        nextLink.style.display="block";
+
+
+    });
+
+
+});
