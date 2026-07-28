@@ -460,7 +460,7 @@ opacity:0;
 
     font-family:Arial;
 
-    font-weight:normal;
+     font-weight:bold;
 
 }
 
@@ -545,5 +545,7 @@ opacity:0;
     margin-left:auto;
 
     margin-right:auto;
+
+    font-weight:bold;
 
 }
