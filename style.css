@@ -537,3 +537,13 @@ opacity:0;
     gap:30px;
 
 }
+#final-link-text,
+#final-link{
+
+    text-align:center;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
