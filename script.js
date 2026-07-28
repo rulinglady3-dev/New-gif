@@ -448,16 +448,18 @@ finalYesButtons.forEach(button=>{
     button.addEventListener("click",()=>{
 
 
-        document
-        .getElementById("final-buttons")
-        .style.display="none";
+        // eski soru ve butonları temizle
 
+        finalMessage.style.display="none";
+
+        finalButtons.style.display="none";
+
+
+        // gif ve link ekranı
 
         finalGif.style.display="block";
 
-
         finalLinkText.style.display="block";
-
 
         finalLink.style.display="block";
 
