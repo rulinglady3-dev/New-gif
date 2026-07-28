@@ -365,7 +365,7 @@ finalText.remove();
 finalQuestion.style.display="flex";
 
 
-        finalCat.src="cat_heart.gif";
+        finalCat.style.display="none";
 
 
         finalMessage.textContent =
