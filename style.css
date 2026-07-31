@@ -813,3 +813,25 @@ img{
 
 
 }
+#envelope-container{
+
+    position:relative;
+
+    z-index:100;
+
+    pointer-events:auto;
+
+    touch-action:manipulation;
+
+}
+
+
+#envelope{
+
+    display:block;
+
+    cursor:pointer;
+
+    touch-action:manipulation;
+
+}
