@@ -146,7 +146,41 @@ let yesScale = 1;
 // =======================
 
 
-envelope.addEventListener("click",()=>{
+envelope.addEventListener("pointerdown",(e)=>{
+
+    e.preventDefault();
+
+
+    envelope.style.animation =
+    "fadeOut .8s forwards";
+
+
+    setTimeout(()=>{
+
+
+        envelope.style.display="none";
+
+
+        letter.style.display="flex";
+
+
+        setTimeout(()=>{
+
+
+            document
+            .querySelector(".letter-window")
+            .classList.add("open");
+
+
+        },100);
+
+
+
+    },700);
+
+
+
+});
 
 
     envelope.style.animation =
@@ -205,83 +239,79 @@ function moveNo(){
     noBtn.getBoundingClientRect();
 
 
-const maxX =
-box.width - btn.width - 40;
 
-
-const maxY =
-box.height - btn.height - 40;
+    const maxX =
+    Math.max(10, box.width - btn.width - 20);
 
 
 
-const x =
-Math.random() * maxX + 20;
+    const maxY =
+    Math.max(10, box.height - btn.height - 20);
 
 
-const y =
-Math.random() * maxY + 20;
+
+    const x =
+    Math.random()*maxX;
+
+
+
+    const y =
+    Math.random()*maxY;
+
+
 
     noBtn.style.position="absolute";
+    noBtn.style.touchAction="none";
+
 
     noBtn.style.left =
-    x + "px";
+    x+"px";
 
 
     noBtn.style.top =
-    y + "px";
-
-    const animations = [
-
-    "rotate(15deg)",
-
-    "rotate(-15deg)",
-
-    "scale(0.8)",
-
-    "translateY(-20px)",
-
-    "rotate(360deg)"
-
-];
-
-
-const randomAnimation =
-animations[
-Math.floor(
-Math.random() * animations.length
-)
-];
-
-
-noBtn.style.transform =
-randomAnimation;
+    y+"px";
 
 
 
-    // soru değiştirme
+    const animations=[
+
+        "rotate(15deg)",
+        "rotate(-15deg)",
+        "scale(.8)",
+        "rotate(360deg)"
+
+    ];
+
+
+
+    noBtn.style.transform =
+    animations[
+        Math.floor(Math.random()*animations.length)
+    ];
+
+
 
     questionIndex++;
 
 
     if(questionIndex < questions.length){
 
-    typeText(
-        message,
-        questions[questionIndex]
-    );
+        typeText(
+            message,
+            questions[questionIndex]
+        );
 
-}
+    }
 
 
-
-    // YES büyümesi
 
     yesScale +=0.15;
 
 
+
     if(yesScale < 2.5){
 
-        yesBtn.style.transform =
+        yesBtn.style.transform=
         `scale(${yesScale})`;
 
     }
@@ -289,12 +319,22 @@ randomAnimation;
 
 }
 
-
 // PC
 
 noBtn.addEventListener(
 "mouseenter",
 ()=>{
+
+    moveNo();
+
+});
+
+
+noBtn.addEventListener(
+"pointerdown",
+(e)=>{
+
+    e.preventDefault();
 
     moveNo();
 
@@ -327,7 +367,9 @@ noBtn.addEventListener(
 // =======================
 
 
-yesBtn.addEventListener("click",()=>{
+yesBtn.addEventListener("pointerdown",(e)=>{
+
+e.preventDefault();
 
 
     catImg.src="cat_dance.gif";
@@ -468,3 +510,105 @@ finalYesButtons.forEach(button=>{
 
 
 });
+// =====================================
+// RESPONSIVE SCREEN UPDATE
+// PC + iPAD + PHONE
+// =====================================
+
+
+function resizeLetter(){
+
+
+    const windowBox =
+    document.querySelector(".letter-window");
+
+
+    if(!windowBox) return;
+
+
+
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+
+
+
+    // küçük ekranlar
+
+    if(w < 600){
+
+
+        windowBox.style.width =
+        "92vw";
+
+
+        windowBox.style.height =
+        "85dvh";
+
+
+    }
+
+
+    // iPad
+
+    else if(w <= 1024){
+
+
+        windowBox.style.width =
+        "380px";
+
+
+        windowBox.style.height =
+        "520px";
+
+
+    }
+
+
+    // PC
+
+    else{
+
+
+        windowBox.style.width =
+        "380px";
+
+
+        windowBox.style.height =
+        "520px";
+
+
+    }
+
+
+
+}
+
+
+
+
+window.addEventListener(
+"resize",
+resizeLetter
+);
+
+
+
+window.addEventListener(
+"orientationchange",
+()=>{
+
+
+    setTimeout(()=>{
+
+
+        resizeLetter();
+
+
+    },300);
+
+
+});
+
+
+
+resizeLetter();
