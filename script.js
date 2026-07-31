@@ -140,47 +140,55 @@ document.getElementById("link-message");
 let yesScale = 1;
 
 
-
 // =======================
 // ZARF AÇILIŞ
 // =======================
 
+let envelopeOpened = false;
 
-envelope.addEventListener("pointerdown",(e)=>{
+function openEnvelope(){
 
-    e.preventDefault();
+    if(envelopeOpened) return;
 
+    envelopeOpened = true;
 
     envelope.style.animation =
     "fadeOut .8s forwards";
 
-
     setTimeout(()=>{
 
+        envelope.style.display = "none";
 
-        envelope.style.display="none";
-
-
-        letter.style.display="flex";
-
+        letter.style.display = "flex";
 
         setTimeout(()=>{
-
 
             document
             .querySelector(".letter-window")
             .classList.add("open");
 
-
         },100);
-
-
 
     },700);
 
+}
 
 
-});
+// Bilgisayar + telefon + iPad
+
+envelope.addEventListener(
+    "click",
+    openEnvelope
+);
+
+envelope.addEventListener(
+    "pointerup",
+    openEnvelope
+);
+
+
+
+    
 
 
     envelope.style.animation =
