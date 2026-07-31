@@ -549,3 +549,267 @@ opacity:0;
     font-weight:bold;
 
 }
+/* =================================
+   RESPONSIVE DESIGN
+   PC + iPAD + PHONE
+================================= */
+
+
+/* Genel resim dokunma ayarı */
+img{
+    user-select:none;
+    -webkit-user-drag:none;
+}
+
+
+/* Tablet ve iPad */
+@media (max-width:1024px){
+
+
+    body{
+
+        min-height:100dvh;
+
+    }
+
+
+    #envelope-container img{
+
+        width:220px;
+
+    }
+
+
+    #envelope-container p{
+
+        font-size:22px;
+
+    }
+
+
+
+    .letter-window{
+
+        width:min(380px,85vw);
+
+        height:min(520px,85vh);
+
+    }
+
+
+
+    #letter-cat{
+
+        width:140px;
+
+    }
+
+
+
+    #message{
+
+        font-size:21px;
+
+    }
+
+
+
+    .btn{
+
+        width:95px;
+
+    }
+
+
+
+    #signature{
+
+        font-size:18px;
+
+        right:15px;
+
+        bottom:10px;
+
+    }
+
+}
+
+
+
+
+/* Telefon */
+@media (max-width:600px){
+
+
+    body{
+
+        min-height:100dvh;
+
+        overflow:hidden;
+
+    }
+
+
+
+    #envelope-container img{
+
+        width:180px;
+
+    }
+
+
+
+    #envelope-container p{
+
+        font-size:18px;
+
+        padding:0 20px;
+
+    }
+
+
+
+
+    .letter-window{
+
+        width:92vw;
+
+        height:85dvh;
+
+        border-radius:20px;
+
+    }
+
+
+
+
+    #letter-cat{
+
+        width:120px;
+
+    }
+
+
+
+
+    #message{
+
+        font-size:18px;
+
+        margin:15px;
+
+    }
+
+
+
+    #letter-buttons{
+
+        gap:15px;
+
+    }
+
+
+
+    .btn{
+
+        width:80px;
+
+    }
+
+
+
+
+    #final-cat{
+
+        width:120px;
+
+    }
+
+
+
+    #final-message{
+
+        font-size:18px;
+
+        padding:0 20px;
+
+    }
+
+
+
+    #final-buttons{
+
+        gap:15px;
+
+    }
+
+
+
+    .final-yes{
+
+        width:80px;
+
+    }
+
+
+
+    #final-gif{
+
+        width:140px;
+
+    }
+
+
+
+    #final-link-text,
+    #final-link,
+    #link-message{
+
+        font-size:18px;
+
+    }
+
+
+
+
+    #signature{
+
+        font-size:14px;
+
+        right:10px;
+
+        bottom:8px;
+
+    }
+
+
+}
+
+
+
+/* Çok küçük telefonlar */
+@media (max-width:360px){
+
+
+    #letter-cat{
+
+        width:100px;
+
+    }
+
+
+    #message{
+
+        font-size:16px;
+
+    }
+
+
+    .btn{
+
+        width:70px;
+
+    }
+
+
+}
