@@ -13,7 +13,9 @@
 </head>
 
 
-<body>
+ <body>
+
+<div id="app">
 
 
 <!-- Background Effects -->
@@ -28,9 +30,10 @@
 
 
     <img 
-    src="envelope.png" 
-    alt="Love Envelope"
-    id="envelope">
+     src="envelope.png" 
+     alt="Love Envelope"
+     id="envelope"
+     draggable="false">
 
 
     <p>
@@ -54,9 +57,10 @@
 
 
         <img 
-        id="letter-cat"
-        src="cat_heart.gif"
-        alt="Cute cat">
+     id="letter-cat"
+     src="cat_heart.gif"
+     alt="Cute cat"
+     draggable="false">
 
 
 
@@ -76,14 +80,16 @@
            <img 
             class="btn no-btn"
             src="no.png"
-            alt="No button">
+            alt="No button"
+            draggable="false">
 
 
             
             <img 
-            class="btn yes-btn"
-            src="yes.png"
-            alt="Yes button">
+           class="btn yes-btn"
+           src="yes.png"
+           alt="Yes button"
+           draggable="false">
 
 
 
@@ -98,7 +104,11 @@
         <div id="final-question">
 
 
-   <img id="final-cat" src="cat_heart.gif" style="display:none;"> 
+   <img 
+     id="final-cat" 
+     src="cat_heart.gif" 
+     style="display:none;"
+     draggable="false">
 
 
     <p id="final-message">
@@ -108,13 +118,16 @@
 
     <div id="final-buttons">
 
-        <img class="final-yes" src="yes.png">
+        <img class="final-yes" src="yes.png" draggable="false">
 
-        <img class="final-yes" src="yes.png">
+        <img class="final-yes" src="yes.png" draggable="false">
 
     </div>
 
-            <img id="final-gif" src="cat_dance.gif">
+            <img 
+          id="final-gif" 
+          src="cat_dance.gif"
+          draggable="false">
 
 
 <p id="final-link-text">
@@ -148,6 +161,8 @@
 
 <script src="script.js"></script>
 
+
+</div>
 
 </body>
 
