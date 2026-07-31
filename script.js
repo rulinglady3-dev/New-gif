@@ -186,47 +186,6 @@ envelope.addEventListener(
     openEnvelope
 );
 
-
-
-    
-
-
-    envelope.style.animation =
-    "fadeOut .8s forwards";
-
-
-    setTimeout(()=>{
-
-
-        envelope.style.display="none";
-
-
-        letter.style.display="flex";
-
-
-        setTimeout(()=>{
-
-
-            document
-            .querySelector(".letter-window")
-            .classList.add("open");
-
-
-        },100);
-
-
-
-    },700);
-
-
-
-});
-
-
-
-
-
-
 // =======================
 // NO KAÇMA
 // =======================
@@ -347,28 +306,6 @@ noBtn.addEventListener(
     moveNo();
 
 });
-
-
-
-// Telefon
-
-noBtn.addEventListener(
-"pointerdown",
-(e)=>{
-
-
-    e.preventDefault();
-
-
-    moveNo();
-
-
-});
-
-
-
-
-
 
 // =======================
 // YES
